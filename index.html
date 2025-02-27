@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Laila El mallass</title>
+  
+
+
+   
+  </head>
+  <body>
+    <script type="module" src="./src/main.jsx"></script>
+
+    <!-- Particles.js container -->
+    <div id="particles-js"></div>
+ 
+    <!-- Main content -->
+    <div id="root"></div>
+   
+ 
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script type="module" src="/src/main.jsx"></script>
+ 
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        particlesJS("particles-js", {
+          particles: {
+            number: {
+              value: 80,
+              density: {
+                enable: true,
+                value_area: 800,
+              },
+            },
+            color: {
+              value: "#feb7c3",
+            },
+            shape: {
+              type: "circle",
+              stroke: {
+                width: 0,
+                color: "#000000",
+              },
+            },
+            opacity: {
+              value: 0.5,
+            },
+            size: {
+              value: 3,
+              random: true,
+            },
+            line_linked: {
+              enable: true,
+              distance: 150,
+              color: "#ff8fb2",
+              opacity: 0.4,
+              width: 1,
+            },
+            move: {
+              enable: true,
+              speed: 2,
+            },
+          },
+          interactivity: {
+            detect_on: "window",
+            events: {
+              onhover: {
+                enable: true,
+                mode: "repulse",
+              },
+              onclick: {
+                enable: true,
+                mode: "push",
+              },
+              resize: true,
+            },
+            modes: {
+              repulse: {
+                distance: 200,
+                duration: 0.4,
+              },
+            },
+          },
+          retina_detect: true,
+        });
+      });
+    </script>
+    
+  </body>
+</html>

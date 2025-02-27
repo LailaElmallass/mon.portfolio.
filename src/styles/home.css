@@ -1,0 +1,338 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%); */
+  padding: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Effet de fond subtil */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(0, 188, 212, 0.1) 0%, transparent 70%);
+  animation: pulse 10s infinite ease-in-out;
+  z-index: 0;
+  pointer-events: none; /* Empêche le blocage des clics */
+}
+
+.hero-btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: button-shine 3s infinite ease-in-out;
+  pointer-events: none; /* Empêche le blocage des clics */
+}
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  gap: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-img {
+  flex: 1;
+  text-align: center;
+}
+
+.hero-img .shiny-img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 50%;
+  border: 4px solid #00bcd4;
+  box-shadow: 0 0 20px rgba(0, 188, 212, 0.5);
+  transition: transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Effet de brillance sur l’image */
+.hero-img .shiny-img::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  animation: shine 4s infinite linear;
+}
+
+.hero-img .shiny-img:hover {
+  transform: scale(1.05);
+}
+
+.hero-text {
+  flex: 1;
+  color: #fff;
+  text-align: left;
+}
+
+.shiny-text {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #00bcd4;
+  text-shadow: 0 0 10px rgba(0, 188, 212, 0.7), 0 0 20px rgba(0, 188, 212, 0.5);
+  line-height: 1.2;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+/* Effet de scintillement sur le texte */
+.shiny-text::after {
+  content: "Laila Elmallass"; /* Duplique le texte pour l’effet */
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: transparent;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+  animation: sparkle 2s infinite ease-in-out;
+  z-index: -1;
+}
+
+.hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #00bcd4, transparent);
+  margin: 20px 0;
+  position: relative;
+}
+
+.hr::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: rgba(0, 188, 212, 0.3);
+  filter: blur(5px);
+  animation: glow 3s infinite ease-in-out;
+}
+
+.intro {
+  font-size: 1.5rem;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 1.2rem;
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: #00bcd4;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Effet de lueur pulsante sur le bouton */
+.hero-btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: button-shine 3s infinite ease-in-out;
+}
+
+.hero-btn:hover {
+  background: #0097a7;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 188, 212, 0.7);
+}
+
+.social-media {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.social-media a {
+  color: #00bcd4;
+  font-size: 1.8rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
+}
+
+/* Effet de brillance sur les icônes */
+.social-media a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(0, 188, 212, 0.5);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #a9cfcc;
+  transform: scale(1.2);
+}
+
+.social-media a:hover::after {
+  width: 40px;
+  height: 40px;
+}
+
+/* Animations */
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) translateY(-100%);
+  }
+  50% {
+    transform: translateX(100%) translateY(100%);
+  }
+  100% {
+    transform: translateX(100%) translateY(100%);
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes button-shine {
+  0%, 100% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  50% {
+    width: 100px;
+    height: 100px;
+    opacity: 0.5;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+/* Responsivité */
+@media (max-width: 900px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .shiny-text {
+    font-size: 2.5rem;
+  }
+
+  .intro {
+    font-size: 1.3rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .hero-img .shiny-img {
+    max-width: 300px;
+  }
+
+  .social-media {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .shiny-text {
+    font-size: 2rem;
+  }
+
+  .intro {
+    font-size: 1.1rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .hero-btn {
+    padding: 10px 25px;
+    font-size: 1rem;
+  }
+
+  .hero-img .shiny-img {
+    max-width: 250px;
+  }
+
+  .social-media a {
+    font-size: 1.5rem;
+  }
+
+  .social-media a:hover::after {
+    width: 30px;
+    height: 30px;
+  }
+}

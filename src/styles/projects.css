@@ -1,0 +1,134 @@
+.projects {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  /* background: #1a1a1a; */
+  border-radius: 8px;
+  animation: fadeIn 0.5s ease-in-out;
+  box-shadow: 1px 1px 10px #00bcd4, -1px -1px 10px #00bcd4;
+  color: #fff;
+}
+
+.projects h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: #00bcd4;
+  margin-bottom: 10px;
+}
+
+.projects p {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  /* background: #2a2a2a; */
+  border: 1px solid #00bcd4;
+  border-radius: 6px;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 188, 212, 0.7);
+}
+
+.project-title {
+  font-size: 1.4rem;
+  color: #00bcd4;
+  margin-bottom: 10px;
+}
+
+.project-desc {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.project-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.project-links a {
+  text-align: center;
+  padding: 8px;
+  background: transparent;
+  border: 1px solid #00bcd4;
+  border-radius: 4px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.project-links a:hover {
+  background: #00bcd4;
+  color: #1a1a1a;
+}
+
+.toggle-button {
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  background: transparent;
+  border: 1px solid #00bcd4;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1rem;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.toggle-button:hover {
+  background: #00bcd4;
+  box-shadow: 0 0 10px rgba(0, 188, 212, 0.7);
+}
+
+@media (max-width: 768px) {
+  .projects {
+    margin: 20px 10px;
+    padding: 15px;
+  }
+
+  .projects h2 {
+    font-size: 1.8rem;
+  }
+
+  .projects p {
+    font-size: 1rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr; /* 1 colonne sur petits écrans */
+  }
+
+  .project-card {
+    padding: 10px;
+  }
+
+  .project-title {
+    font-size: 1.2rem;
+  }
+
+  .project-desc {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .toggle-button {
+    width: 100%;
+    padding: 8px;
+  }
+}

@@ -1,0 +1,128 @@
+.navbar {
+  padding-inline: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.brand img {
+  width: 100px;
+}
+
+.links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-link {
+  color: #5c9fb2;
+  margin-inline: 30px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espace entre icône et texte */
+}
+
+.nav-link i {
+  font-size: 1.2rem; /* Taille des icônes */
+}
+
+.nav-link:hover {
+  color: #a9cfcc;
+  transform: scale(1.05);
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #5c9fb2;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+.links.open {
+  transform: translateX(0);
+}
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 200px;
+    background: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .links.open {
+    transform: translateX(0);
+  }
+
+  .nav-link {
+    margin: 20px 0;
+    font-size: 18px;
+  }
+
+  /* Animation des barres en X */
+  .hamburger.open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .hamburger.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .nav-link {
+    font-size: 16px;
+  }
+
+  .nav-link i {
+    font-size: 1rem;
+  }
+
+  .hamburger {
+    padding: 8px;
+  }
+
+  .hamburger .bar {
+    width: 20px;
+    height: 2px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .nav-link {
+    font-size: 14px;
+  }
+}
